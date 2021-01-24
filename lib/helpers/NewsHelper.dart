@@ -1,9 +1,16 @@
 import 'dart:convert';
+import 'package:html/parser.dart';
 import 'package:diamond_fm_app/models/article_model.dart';
 import 'package:http/http.dart' as http;
 
 class News {
   List<ArticleModel> news = [];
+  String parseHtml({String htmlString}) {
+    final document = parse(htmlString);
+    final String parsedString = parse(document.body.text).documentElement.text;
+    return parsedString;
+  }
+
   Future<void> getNews() async {
     String url = 'https://diamondfm.net/get-news';
     //'http://newsapi.org/v2/top-headlines?country=ng&apiKey=f34a971b04f6412aaf0655956268448e';
@@ -16,7 +23,7 @@ class News {
         if (element['image'] != null && element['title'] != null) {
           ArticleModel articleModel = ArticleModel(
               title: element['title'],
-              body: element['body'],
+              body: parseHtml(htmlString: element['body']),
               id: int.parse(element['id']),
               image: Uri.decodeFull(element['image']),
               date: element['publishedAt'] == null
