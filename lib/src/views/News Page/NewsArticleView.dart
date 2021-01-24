@@ -24,37 +24,41 @@ class _NewsArticleViewState extends State<NewsArticleView> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 10, left: 15, right: 15),
+        padding:
+            const EdgeInsets.only(top: 10, left: 15, right: 15, bottom: 10),
         child: Container(
           color: Color(0xFF302B54),
-          child: ListView(
-            children: [
-              Container(
-                height: MediaQuery.of(context).size.height * 0.35,
-                width: double.infinity,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.circular(6),
-                    child: Image.network(widget.article.image)),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Text(
-                widget.article.title,
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                    color: Colors.lightGreenAccent[200],
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Text(
-                '${widget.article.body}',
-                style: TextStyle(color: Colors.white, fontSize: 17),
-              ),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: ListView(
+              children: [
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.35,
+                  width: double.infinity,
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(6),
+                      child: Image.network(widget.article.image)),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  widget.article.title,
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                      color: Colors.lightGreenAccent[200],
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  '${widget.article.body}',
+                  style: TextStyle(color: Colors.white, fontSize: 17),
+                ),
+              ],
+            ),
           ),
         ),
       ),
