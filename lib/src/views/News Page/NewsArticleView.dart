@@ -1,17 +1,14 @@
-import 'dart:async';
+import 'package:diamond_fm_app/models/article_model.dart';
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 
 class NewsArticleView extends StatefulWidget {
-  final String articleUrl;
-  NewsArticleView({this.articleUrl});
+  final ArticleModel article;
+  NewsArticleView({@required this.article});
   @override
   _NewsArticleViewState createState() => _NewsArticleViewState();
 }
 
 class _NewsArticleViewState extends State<NewsArticleView> {
-  final Completer<WebViewController> _completer =
-      Completer<WebViewController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,14 +23,39 @@ class _NewsArticleViewState extends State<NewsArticleView> {
           style: TextStyle(color: Colors.white),
         ),
       ),
-      body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        child: WebView(
-          initialUrl: widget.articleUrl,
-          onWebViewCreated: ((WebViewController webViewController) {
-            _completer.complete(webViewController);
-          }),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 10, left: 15, right: 15),
+        child: Container(
+          color: Color(0xFF302B54),
+          child: ListView(
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height * 0.35,
+                width: double.infinity,
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(6),
+                    child: Image.network(widget.article.image)),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                widget.article.title,
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                    color: Colors.lightGreenAccent[200],
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                '${widget.article.body}',
+                style: TextStyle(color: Colors.white, fontSize: 17),
+              ),
+            ],
+          ),
         ),
       ),
     );

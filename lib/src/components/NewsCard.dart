@@ -1,13 +1,10 @@
+import 'package:diamond_fm_app/models/article_model.dart';
 import 'package:diamond_fm_app/src/views/News%20Page/NewsArticleView.dart';
 import 'package:flutter/material.dart';
 
 class NewsCard extends StatelessWidget {
-  final String title, description, imageUrl, url;
-  NewsCard(
-      {@required this.description,
-      @required this.imageUrl,
-      @required this.url,
-      @required this.title});
+  final ArticleModel article;
+  NewsCard({@required this.article});
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -34,9 +31,9 @@ class NewsCard extends StatelessWidget {
             children: <Widget>[
               ClipRRect(
                   borderRadius: BorderRadius.circular(6),
-                  child: Image.network(imageUrl)),
+                  child: Image.network(article.image)),
               Text(
-                title,
+                article.title,
                 textAlign: TextAlign.start,
                 style: TextStyle(
                     color: Colors.lightGreenAccent[200],
@@ -47,7 +44,7 @@ class NewsCard extends StatelessWidget {
                 height: 8,
               ),
               Text(
-                description,
+                '${article.body.characters.take(60)}...',
                 style: TextStyle(color: Colors.white, fontSize: 17),
               ),
               FlatButton(
@@ -57,7 +54,7 @@ class NewsCard extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                           builder: (context) => NewsArticleView(
-                                articleUrl: url,
+                                article: article,
                               )));
                 },
                 child: Text(

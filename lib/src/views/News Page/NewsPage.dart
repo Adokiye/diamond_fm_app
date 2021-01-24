@@ -46,12 +46,7 @@ class _NewsPageState extends State<NewsPage> {
                     shrinkWrap: true,
                     itemCount: articles.length,
                     itemBuilder: (context, index) {
-                      return NewsCard(
-                        description: articles[index].description,
-                        imageUrl: articles[index].urlToImage,
-                        title: articles[index].title,
-                        url: articles[index].url,
-                      );
+                      return NewsCard(article: articles[index]);
                     }),
               ),
             ),
