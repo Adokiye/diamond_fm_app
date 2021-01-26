@@ -21,7 +21,7 @@ class MySemiCircle extends StatelessWidget {
 class MyPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()..color = Colors.lightGreenAccent[200];
+    Paint paint = Paint()..color = Color(0xffB4D433);
     canvas.drawArc(
       Rect.fromCenter(
         center: Offset(size.height / 2, size.width / 2),
@@ -30,7 +30,7 @@ class MyPainter extends CustomPainter {
       ),
       pi,
       pi,
-      false,
+      true,
       paint,
     );
   }

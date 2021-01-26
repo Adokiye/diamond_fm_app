@@ -16,7 +16,7 @@ class _NewsArticleViewState extends State<NewsArticleView> {
       appBar: AppBar(
         //leading: Icon(Icons.arrow_back_ios_rounded, color: Colors.white),
         iconTheme: IconThemeData(color: Colors.white),
-        backgroundColor: Colors.lightGreenAccent[200],
+        backgroundColor: Color(0xFFCEFF5A),
         elevation: 8,
         title: Text(
           'News',
@@ -46,7 +46,7 @@ class _NewsArticleViewState extends State<NewsArticleView> {
                   widget.article.title,
                   textAlign: TextAlign.start,
                   style: TextStyle(
-                      color: Colors.lightGreenAccent[200],
+                      color: Color(0xFFCEFF5A),
                       fontSize: 18,
                       fontWeight: FontWeight.w500),
                 ),
