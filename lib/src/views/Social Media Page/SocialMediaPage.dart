@@ -22,6 +22,7 @@ class _SocialMediaPageState extends State<SocialMediaPage> {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: WebView(
+          javascriptMode: JavascriptMode.unrestricted,
           initialUrl: widget.url,
           onWebViewCreated: ((WebViewController webViewController) {
             _completer.complete(webViewController);
