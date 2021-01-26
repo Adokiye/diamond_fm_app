@@ -11,7 +11,7 @@ class _ListenPageState extends State<ListenPage> {
   double _currentSliderValue = 15;
   bool onPlay = false;
   // bool isVisible = true;
-  // String radioUrl = 'http://equinox.shoutca.st:8101';
+  String radioUrl = 'http://95.110.227.3:8000/diamond';
   // FlutterRadio radio = FlutterRadio();
 
   @override
@@ -29,7 +29,6 @@ class _ListenPageState extends State<ListenPage> {
     return MyScaffold(
       title: 'Listen',
       body: ListView(
-        //mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
             color: Color(0xFF000015),
@@ -169,10 +168,9 @@ class _ListenPageState extends State<ListenPage> {
                       onPressed: () {
                         setState(() {
                           onPlay = !onPlay;
-
-                          // onPlay
-                          //     ? FlutterRadio.play(url: radioUrl)
-                          //     : FlutterRadio.pause(url: radioUrl);
+                          onPlay
+                              ? FlutterRadio.play(url: radioUrl)
+                              : FlutterRadio.pause(url: radioUrl);
                         });
                       },
                     ),

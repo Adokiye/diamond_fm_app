@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class SocialMediaPage extends StatefulWidget {
+  final String url;
+  SocialMediaPage({@required this.url});
   @override
   _SocialMediaPageState createState() => _SocialMediaPageState();
 }
@@ -20,7 +22,7 @@ class _SocialMediaPageState extends State<SocialMediaPage> {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: WebView(
-          initialUrl: 'https://facebook.com',
+          initialUrl: widget.url,
           onWebViewCreated: ((WebViewController webViewController) {
             _completer.complete(webViewController);
           }),

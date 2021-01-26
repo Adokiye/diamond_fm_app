@@ -62,8 +62,10 @@ class _MenuBarState extends State<MenuBar> {
                     ),
                     onTap: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              SocialMediaPage()));
+                          builder: (BuildContext context) => SocialMediaPage(
+                                url:
+                                    'https://www.facebook.com/diamond887fmilorin/',
+                              )));
                     },
                   ),
                 ],
@@ -81,8 +83,10 @@ class _MenuBarState extends State<MenuBar> {
                     child: GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                SocialMediaPage()));
+                            builder: (BuildContext context) => SocialMediaPage(
+                                  url:
+                                      'https://www.facebook.com/diamond887fmilorin/',
+                                )));
                       },
                       child: Image.asset('assets/facebooklogo.png'),
                     ),
@@ -96,8 +100,9 @@ class _MenuBarState extends State<MenuBar> {
                     child: GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                SocialMediaPage()));
+                            builder: (BuildContext context) => SocialMediaPage(
+                                  url: 'https://twitter.com/diamond887fm',
+                                )));
                       },
                       child: Image.asset('assets/twitterlogo.png'),
                     ),
@@ -111,8 +116,8 @@ class _MenuBarState extends State<MenuBar> {
                     child: GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                SocialMediaPage()));
+                            builder: (BuildContext context) => SocialMediaPage(
+                                url: 'https://instagram.com/diamond887fm/')));
                       },
                       child: Image.asset('assets/instagramlogo.png'),
                     ),
