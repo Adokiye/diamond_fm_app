@@ -5,8 +5,7 @@ class MySemiCircle extends StatelessWidget {
   final double diameter;
   final Widget child;
 
-  const MySemiCircle({Key key, this.diameter = 200, this.child})
-      : super(key: key);
+  const MySemiCircle({Key key, this.diameter, this.child}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class MySemiCircle extends StatelessWidget {
 class MyPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()..color = Colors.red;
+    Paint paint = Paint()..color = Colors.lightGreenAccent[200];
     canvas.drawArc(
       Rect.fromCenter(
         center: Offset(size.height / 2, size.width / 2),

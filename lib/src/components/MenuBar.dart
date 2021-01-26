@@ -23,7 +23,7 @@ class _MenuBarState extends State<MenuBar> {
               IconButton(
                 icon: Icon(
                   Icons.arrow_back_ios,
-                  color: Colors.white,
+                  color: Color(0xffB4D433),
                 ),
                 onPressed: () {
                   Navigator.of(context).pop();
@@ -33,10 +33,10 @@ class _MenuBarState extends State<MenuBar> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ListTile(
-                    leading: Icon(Icons.headset, color: Colors.white),
+                    leading: Icon(Icons.headset, color: Color(0xffB4D433)),
                     title: Text(
                       'Listen',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Color(0xffB4D433)),
                     ),
                     onTap: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -44,10 +44,10 @@ class _MenuBarState extends State<MenuBar> {
                     },
                   ),
                   ListTile(
-                    leading: Icon(Icons.ballot, color: Colors.white),
+                    leading: Icon(Icons.ballot, color: Color(0xffB4D433)),
                     title: Text(
                       'News',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Color(0xffB4D433)),
                     ),
                     onTap: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -55,10 +55,10 @@ class _MenuBarState extends State<MenuBar> {
                     },
                   ),
                   ListTile(
-                    leading: Icon(Icons.chat_bubble, color: Colors.white),
+                    leading: Icon(Icons.chat_bubble, color: Color(0xffB4D433)),
                     title: Text(
                       'Social Media',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Color(0xffB4D433)),
                     ),
                     onTap: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(

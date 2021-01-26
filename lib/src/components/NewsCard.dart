@@ -36,7 +36,7 @@ class NewsCard extends StatelessWidget {
                 article.title,
                 textAlign: TextAlign.start,
                 style: TextStyle(
-                    color: Colors.lightGreenAccent[200],
+                    color: Color(0xffF7921E),
                     fontSize: 18,
                     fontWeight: FontWeight.w500),
               ),

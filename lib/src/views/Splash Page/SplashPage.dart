@@ -54,8 +54,7 @@ class _SplashPageState extends State<SplashPage> {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   'CONTINUE',
-                  style: TextStyle(
-                      color: Colors.lightGreenAccent[200], fontSize: 25),
+                  style: TextStyle(color: Color(0xffF7921E), fontSize: 22),
                 ),
               ),
             ),

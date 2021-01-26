@@ -1,3 +1,4 @@
+import 'package:diamond_fm_app/src/components/MySemiCircle.dart';
 import 'package:flutter_radio/flutter_radio.dart';
 import 'package:diamond_fm_app/src/components/MyScaffold.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,9 @@ class _ListenPageState extends State<ListenPage> {
   Widget build(BuildContext context) {
     return MyScaffold(
       title: 'Listen',
-      body: ListView(
+      body: Stack(
+        alignment: Alignment.center,
+        children:[ListView(
         children: [
           Container(
             color: Color(0xFF000015),
@@ -60,7 +63,7 @@ class _ListenPageState extends State<ListenPage> {
                 ),
                 Text('Listen Live',
                     style: TextStyle(
-                      color: Colors.lightGreenAccent[200],
+                      color: Color(0XFFF7921E),
                       fontSize: 20,
                     )),
                 SizedBox(
@@ -122,7 +125,8 @@ class _ListenPageState extends State<ListenPage> {
                         });
                       },
                     ),
-                    Slider.adaptive(
+                    Expanded(
+                      child:Slider.adaptive(
                       activeColor: Colors.lightGreenAccent[200],
                       inactiveColor: Colors.white,
                       value: _currentSliderValue,
@@ -135,7 +139,7 @@ class _ListenPageState extends State<ListenPage> {
                           _currentSliderValue = value;
                         });
                       },
-                    ),
+                    )),
                     IconButton(
                       icon: Icon(
                         Icons.volume_up,
@@ -155,32 +159,41 @@ class _ListenPageState extends State<ListenPage> {
                 SizedBox(
                   height: 30,
                 ),
-                Center(
-                  child: CircleAvatar(
-                    radius: 30,
-                    backgroundColor: Colors.white,
-                    child: IconButton(
-                      icon: Icon(
-                        onPlay ? Icons.stop : Icons.play_arrow,
-                        color: Colors.lightGreenAccent[200],
-                        size: 35,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          onPlay = !onPlay;
-                          onPlay
-                              ? FlutterRadio.play(url: radioUrl)
-                              : FlutterRadio.pause(url: radioUrl);
-                        });
-                      },
-                    ),
-                  ),
+    MySemiCircle(
+    diameter: MediaQuery.of(context).size.width,
+    // child: 
+
+    //               )),
                 ),
               ],
             ),
           ),
         ],
       ),
+       Positioned(bottom:MediaQuery.of(context).size.width/3,
+           child:   Center(
+    child: CircleAvatar(
+    radius: 30,
+    backgroundColor: Colors.white,
+    child: IconButton(
+    icon: Icon(
+    onPlay ? Icons.stop : Icons.play_arrow,
+    color: Colors.lightGreenAccent[200],
+    size: 35,
+    ),
+    onPressed: () {
+    setState(() {
+    onPlay = !onPlay;
+    onPlay
+    ? FlutterRadio.play(url: radioUrl)
+        : FlutterRadio.pause(url: radioUrl);
+    });
+    },
+    ) )))
+
+        ]
+
+      )
     );
   }
 }
