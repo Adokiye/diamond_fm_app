@@ -6,6 +6,7 @@ attr auto_show
 attr bar_height
 attr buffered_color
 attr controller_layout_id
+attr coordinatorLayoutStyle
 attr default_artwork
 attr fastforward_increment
 attr font
@@ -21,6 +22,13 @@ attr fontWeight
 attr hide_during_ads
 attr hide_on_touch
 attr keep_content_on_player_reset
+attr keylines
+attr layout_anchor
+attr layout_anchorGravity
+attr layout_behavior
+attr layout_dodgeInsetEdges
+attr layout_insetEdge
+attr layout_keyline
 attr played_ad_marker_color
 attr played_color
 attr player_layout_id
@@ -36,12 +44,15 @@ attr show_buffering
 attr show_shuffle_button
 attr show_timeout
 attr shutter_background_color
+attr statusBarBackground
 attr surface_type
+attr time_bar_min_update_interval
 attr touch_target_height
 attr ttcIndex
 attr unplayed_color
 attr use_artwork
 attr use_controller
+attr use_sensor_rotation
 color exo_edit_mode_background_color
 color exo_error_message_background_color
 color notification_action_color_filter
@@ -90,15 +101,26 @@ drawable exo_controls_repeat_all
 drawable exo_controls_repeat_off
 drawable exo_controls_repeat_one
 drawable exo_controls_rewind
-drawable exo_controls_shuffle
+drawable exo_controls_shuffle_off
+drawable exo_controls_shuffle_on
+drawable exo_controls_vr
 drawable exo_edit_mode_logo
+drawable exo_icon_circular_play
 drawable exo_icon_fastforward
+drawable exo_icon_fullscreen_enter
+drawable exo_icon_fullscreen_exit
 drawable exo_icon_next
 drawable exo_icon_pause
 drawable exo_icon_play
 drawable exo_icon_previous
+drawable exo_icon_repeat_all
+drawable exo_icon_repeat_off
+drawable exo_icon_repeat_one
 drawable exo_icon_rewind
+drawable exo_icon_shuffle_off
+drawable exo_icon_shuffle_on
 drawable exo_icon_stop
+drawable exo_icon_vr
 drawable exo_notification_fastforward
 drawable exo_notification_next
 drawable exo_notification_pause
@@ -160,12 +182,21 @@ id action_image
 id action_text
 id actions
 id all
+id always
 id async
 id blocking
+id bottom
 id cancel_action
+id center
+id center_horizontal
+id center_vertical
 id chronometer
+id clip_horizontal
+id clip_vertical
 id dialog_button
+id end
 id end_padder
+id exo_ad_overlay
 id exo_artwork
 id exo_buffering
 id exo_content_frame
@@ -181,32 +212,42 @@ id exo_play
 id exo_position
 id exo_prev
 id exo_progress
+id exo_progress_placeholder
 id exo_repeat_toggle
 id exo_rew
 id exo_shuffle
 id exo_shutter
 id exo_subtitles
 id exo_track_selection_view
+id exo_vr
 id fill
+id fill_horizontal
+id fill_vertical
 id fit
 id fixed_height
 id fixed_width
 id forever
+id glide_custom_view_target_tag
 id icon
 id icon_group
 id info
 id italic
+id left
 id line1
 id line3
 id media_actions
+id never
 id none
 id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
 id one
+id right
 id right_icon
 id right_side
+id spherical_gl_surface_view
+id start
 id status_bar_latest_event_content
 id surface_view
 id tag_accessibility_actions
@@ -222,8 +263,13 @@ id text2
 id texture_view
 id time
 id title
+id top
+id video_decoder_gl_surface_view
+id when_playing
 id zoom
 integer cancel_button_image_alpha
+integer exo_media_button_opacity_percentage_disabled
+integer exo_media_button_opacity_percentage_enabled
 integer status_bar_notification_info_maxnum
 layout custom_dialog
 layout exo_list_divider
@@ -250,6 +296,7 @@ layout notification_template_part_time
 mipmap ic_launcher
 string exo_controls_fastforward_description
 string exo_controls_fullscreen_description
+string exo_controls_hide
 string exo_controls_next_description
 string exo_controls_pause_description
 string exo_controls_play_description
@@ -258,8 +305,11 @@ string exo_controls_repeat_all_description
 string exo_controls_repeat_off_description
 string exo_controls_repeat_one_description
 string exo_controls_rewind_description
-string exo_controls_shuffle_description
+string exo_controls_show
+string exo_controls_shuffle_off_description
+string exo_controls_shuffle_on_description
 string exo_controls_stop_description
+string exo_controls_vr_description
 string exo_download_completed
 string exo_download_description
 string exo_download_downloading
@@ -270,6 +320,10 @@ string exo_item_list
 string exo_track_bitrate
 string exo_track_mono
 string exo_track_resolution
+string exo_track_role_alternate
+string exo_track_role_closed_captions
+string exo_track_role_commentary
+string exo_track_role_supplementary
 string exo_track_selection_auto
 string exo_track_selection_none
 string exo_track_selection_title_audio
@@ -288,7 +342,7 @@ style ExoMediaButton_Pause
 style ExoMediaButton_Play
 style ExoMediaButton_Previous
 style ExoMediaButton_Rewind
-style ExoMediaButton_Shuffle
+style ExoMediaButton_VR
 style LaunchTheme
 style NormalTheme
 style TextAppearance_Compat_Notification
@@ -303,12 +357,15 @@ style TextAppearance_Compat_Notification_Title
 style TextAppearance_Compat_Notification_Title_Media
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
+style Widget_Support_CoordinatorLayout
 styleable AspectRatioFrameLayout resize_mode
 styleable ColorStateListItem android_color android_alpha alpha
+styleable CoordinatorLayout keylines statusBarBackground
+styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable DefaultTimeBar ad_marker_color ad_marker_width bar_height buffered_color played_ad_marker_color played_color scrubber_color scrubber_disabled_size scrubber_dragged_size scrubber_drawable scrubber_enabled_size touch_target_height unplayed_color
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
-styleable PlayerControlView controller_layout_id fastforward_increment repeat_toggle_modes rewind_increment show_shuffle_button show_timeout
-styleable PlayerView auto_show controller_layout_id default_artwork fastforward_increment hide_during_ads hide_on_touch keep_content_on_player_reset player_layout_id repeat_toggle_modes resize_mode rewind_increment show_buffering show_shuffle_button show_timeout shutter_background_color surface_type use_artwork use_controller
+styleable PlayerControlView ad_marker_color ad_marker_width bar_height buffered_color controller_layout_id fastforward_increment played_ad_marker_color played_color repeat_toggle_modes rewind_increment scrubber_color scrubber_disabled_size scrubber_dragged_size scrubber_drawable scrubber_enabled_size show_shuffle_button show_timeout time_bar_min_update_interval touch_target_height unplayed_color
+styleable PlayerView ad_marker_color ad_marker_width auto_show bar_height buffered_color controller_layout_id default_artwork fastforward_increment hide_during_ads hide_on_touch keep_content_on_player_reset played_ad_marker_color played_color player_layout_id repeat_toggle_modes resize_mode rewind_increment scrubber_color scrubber_disabled_size scrubber_dragged_size scrubber_drawable scrubber_enabled_size show_buffering show_shuffle_button show_timeout shutter_background_color surface_type time_bar_min_update_interval touch_target_height unplayed_color use_artwork use_controller use_sensor_rotation

@@ -2,6 +2,7 @@
 <resources>
     <string name="exo_controls_fastforward_description">กรอไปข้างหน้า</string>
     <string name="exo_controls_fullscreen_description">โหมดเต็มหน้าจอ</string>
+    <string name="exo_controls_hide">ซ่อนตัวควบคุมโปรแกรมเล่น</string>
     <string name="exo_controls_next_description">แทร็กถัดไป</string>
     <string name="exo_controls_pause_description">หยุด</string>
     <string name="exo_controls_play_description">เล่น</string>
@@ -10,8 +11,11 @@
     <string name="exo_controls_repeat_off_description">ไม่เล่นซ้ำ</string>
     <string name="exo_controls_repeat_one_description">เล่นซ้ำเพลงเดียว</string>
     <string name="exo_controls_rewind_description">กรอกลับ</string>
-    <string name="exo_controls_shuffle_description">สุ่ม</string>
+    <string name="exo_controls_show">แสดงแผงควบคุมโปรแกรมเล่น</string>
+    <string name="exo_controls_shuffle_off_description">ปิดการสุ่มเพลงอยู่</string>
+    <string name="exo_controls_shuffle_on_description">เปิดการสุ่มเพลงอยู่</string>
     <string name="exo_controls_stop_description">หยุด</string>
+    <string name="exo_controls_vr_description">โหมด VR</string>
     <string name="exo_download_completed">การดาวน์โหลดเสร็จสมบูรณ์</string>
     <string name="exo_download_description">ดาวน์โหลด</string>
     <string name="exo_download_downloading">กำลังดาวน์โหลด</string>
@@ -22,6 +26,10 @@
     <string name="exo_track_bitrate">%1$.2f Mbps</string>
     <string name="exo_track_mono">โมโน</string>
     <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">อื่นๆ</string>
+    <string name="exo_track_role_closed_captions">คำบรรยาย</string>
+    <string name="exo_track_role_commentary">ความคิดเห็น</string>
+    <string name="exo_track_role_supplementary">แทร็กเสริม</string>
     <string name="exo_track_selection_auto">ยานยนต์</string>
     <string name="exo_track_selection_none">ไม่มี</string>
     <string name="exo_track_selection_title_audio">เสียง</string>

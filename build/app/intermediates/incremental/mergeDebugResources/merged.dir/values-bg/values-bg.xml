@@ -2,6 +2,7 @@
 <resources>
     <string name="exo_controls_fastforward_description">Превъртане напред</string>
     <string name="exo_controls_fullscreen_description">Режим на цял екран</string>
+    <string name="exo_controls_hide">Скриване на контролите на плейъра</string>
     <string name="exo_controls_next_description">Следващ запис</string>
     <string name="exo_controls_pause_description">Поставяне на пауза</string>
     <string name="exo_controls_play_description">Възпроизвеждане</string>
@@ -10,8 +11,11 @@
     <string name="exo_controls_repeat_off_description">Без повтаряне</string>
     <string name="exo_controls_repeat_one_description">Повтаряне на един елемент</string>
     <string name="exo_controls_rewind_description">Превъртане назад</string>
-    <string name="exo_controls_shuffle_description">Разбъркване</string>
+    <string name="exo_controls_show">Показване на контролите на плейъра</string>
+    <string name="exo_controls_shuffle_off_description">Разбъркването е изключено</string>
+    <string name="exo_controls_shuffle_on_description">Разбъркването е включено</string>
     <string name="exo_controls_stop_description">Спиране</string>
+    <string name="exo_controls_vr_description">режим за VR</string>
     <string name="exo_download_completed">Изтеглянето завърши</string>
     <string name="exo_download_description">Изтегляне</string>
     <string name="exo_download_downloading">Изтегля се</string>
@@ -22,6 +26,10 @@
     <string name="exo_track_bitrate">%1$.2f Мб/сек</string>
     <string name="exo_track_mono">Моно</string>
     <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Алтернативен запис</string>
+    <string name="exo_track_role_closed_captions">Субтитри</string>
+    <string name="exo_track_role_commentary">Коментар</string>
+    <string name="exo_track_role_supplementary">Допълнителен запис</string>
     <string name="exo_track_selection_auto">Автоматично</string>
     <string name="exo_track_selection_none">Нищо</string>
     <string name="exo_track_selection_title_audio">Аудиозапис</string>

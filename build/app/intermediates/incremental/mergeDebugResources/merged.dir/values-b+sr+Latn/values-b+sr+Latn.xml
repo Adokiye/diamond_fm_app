@@ -2,6 +2,7 @@
 <resources>
     <string name="exo_controls_fastforward_description">Premotaj unapred</string>
     <string name="exo_controls_fullscreen_description">Režim celog ekrana</string>
+    <string name="exo_controls_hide">Sakrij kontrole plejera</string>
     <string name="exo_controls_next_description">Sledeća pesma</string>
     <string name="exo_controls_pause_description">Pauziraj</string>
     <string name="exo_controls_play_description">Pusti</string>
@@ -10,8 +11,11 @@
     <string name="exo_controls_repeat_off_description">Ne ponavljaj nijednu</string>
     <string name="exo_controls_repeat_one_description">Ponovi jednu</string>
     <string name="exo_controls_rewind_description">Premotaj unazad</string>
-    <string name="exo_controls_shuffle_description">Pusti nasumično</string>
+    <string name="exo_controls_show">Prikaži kontrole plejera</string>
+    <string name="exo_controls_shuffle_off_description">Nasumično puštanje je isključeno</string>
+    <string name="exo_controls_shuffle_on_description">Nasumično puštanje je uključeno</string>
     <string name="exo_controls_stop_description">Zaustavi</string>
+    <string name="exo_controls_vr_description">VR režim</string>
     <string name="exo_download_completed">Preuzimanje je završeno</string>
     <string name="exo_download_description">Preuzmi</string>
     <string name="exo_download_downloading">Preuzima se</string>
@@ -22,6 +26,10 @@
     <string name="exo_track_bitrate">%1$.2f Mb/s</string>
     <string name="exo_track_mono">Mono</string>
     <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Alternativno</string>
+    <string name="exo_track_role_closed_captions">Titl</string>
+    <string name="exo_track_role_commentary">Komentar</string>
+    <string name="exo_track_role_supplementary">Dodatno</string>
     <string name="exo_track_selection_auto">Automatski</string>
     <string name="exo_track_selection_none">Nijedna</string>
     <string name="exo_track_selection_title_audio">Audio</string>

@@ -1,7 +1,8 @@
-import 'package:diamond_fm_app/src/components/MySemiCircle.dart';
 import 'package:flutter_radio/flutter_radio.dart';
 import 'package:diamond_fm_app/src/components/MyScaffold.dart';
 import 'package:flutter/material.dart';
+import 'package:volume/volume.dart';
+
 
 class ListenPage extends StatefulWidget {
   @override
@@ -9,24 +10,48 @@ class ListenPage extends StatefulWidget {
 }
 
 class _ListenPageState extends State<ListenPage> {
+  int maxVolume;
+  int currentVolume;
   double _currentSliderValue = 15;
+  // final assetsAudioPlayer = AssetsAudioPlayer();
   bool onPlay = false;
-  // bool isVisible = true;
   String radioUrl = 'http://95.110.227.3:8000/diamond';
-  // FlutterRadio radio = FlutterRadio();
 
   @override
   void initState() {
     super.initState();
+    initVolumeState();
+    updateVolume();
     audioStart();
   }
 
+  Future<void> initVolumeState() async {
+    await Volume.controlVolume(AudioManager.STREAM_MUSIC);
+  }
+
+  updateVolume() async {
+    maxVolume = await Volume.getMaxVol;
+    currentVolume = await Volume.getVol;
+    _currentSliderValue = currentVolume.toDouble();
+  }
+
+  setVolume(int i) async {
+    await Volume.setVol(i);
+  }
+
   Future<void> audioStart() async {
-    await FlutterRadio.audioStart();
+    if (!await FlutterRadio.isPlaying()) {
+      await FlutterRadio.audioStart();
+    } else {
+      setState(() {
+        onPlay = true;
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
+    // bool onPlay = assetsAudioPlayer.isPlaying.value;
     return MyScaffold(
         title: 'Listen',
         body: Stack(alignment: Alignment.center, children: [
@@ -91,13 +116,14 @@ class _ListenPageState extends State<ListenPage> {
                             Icons.volume_down,
                             color: Colors.white,
                           ),
-                          onPressed: () {
+                          onPressed: () async {
                             setState(() {
                               if (_currentSliderValue >= 1.0) {
                                 _currentSliderValue = _currentSliderValue - 1.0;
-                                // FlutterRadio.setVolume(_currentSliderValue);
                               }
                             });
+                            await setVolume(_currentSliderValue.toInt());
+                            await updateVolume();
                           },
                         ),
                         Expanded(
@@ -109,10 +135,13 @@ class _ListenPageState extends State<ListenPage> {
                           max: 15,
                           divisions: 15,
                           label: _currentSliderValue.round().toString(),
-                          onChanged: (double value) {
+                          onChanged: (double value) async {
                             setState(() {
                               _currentSliderValue = value;
                             });
+
+                            await setVolume(_currentSliderValue.toInt());
+                            await updateVolume();
                           },
                         )),
                         IconButton(
@@ -120,13 +149,15 @@ class _ListenPageState extends State<ListenPage> {
                             Icons.volume_up,
                             color: Colors.white,
                           ),
-                          onPressed: () {
+                          onPressed: () async {
                             setState(() {
                               if (_currentSliderValue <= 14.0) {
                                 _currentSliderValue = _currentSliderValue + 1.0;
-                                // FlutterRadio.setVolume(_currentSliderValue);
                               }
                             });
+
+                            await setVolume(_currentSliderValue.toInt());
+                            await updateVolume();
                           },
                         ),
                       ],
@@ -156,10 +187,15 @@ class _ListenPageState extends State<ListenPage> {
                                   onPressed: () {
                                     setState(() {
                                       onPlay = !onPlay;
+
                                       onPlay
                                           ? FlutterRadio.play(url: radioUrl)
                                           : FlutterRadio.pause(url: radioUrl);
                                     });
+                                    // assetsAudioPlayer.isPlaying.value
+                                    //     ? assetsAudioPlayer.stop()
+                                    //     : assetsAudioPlayer
+                                    //         .open(Audio.liveStream(radioUrl));
                                   },
                                 ))),
                       ),
@@ -170,5 +206,12 @@ class _ListenPageState extends State<ListenPage> {
             ],
           ),
         ]));
+  }
+
+  Future playingStatus() async {
+    bool isPlaying = await FlutterRadio.isPlaying();
+    setState(() {
+      onPlay = isPlaying;
+    });
   }
 }

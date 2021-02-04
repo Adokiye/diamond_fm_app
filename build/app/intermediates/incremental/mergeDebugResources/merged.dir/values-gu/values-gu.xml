@@ -2,6 +2,7 @@
 <resources>
     <string name="exo_controls_fastforward_description">ફાસ્ટ ફૉરવર્ડ કરો</string>
     <string name="exo_controls_fullscreen_description">પૂર્ણસ્ક્રીન મોડ</string>
+    <string name="exo_controls_hide">પ્લેયર માટેના નિયંત્રણો છુપાવો</string>
     <string name="exo_controls_next_description">આગલો ટ્રૅક</string>
     <string name="exo_controls_pause_description">થોભો</string>
     <string name="exo_controls_play_description">ચલાવો</string>
@@ -10,8 +11,11 @@
     <string name="exo_controls_repeat_off_description">કોઈ રિપીટ કરતા નહીં</string>
     <string name="exo_controls_repeat_one_description">એક રિપીટ કરો</string>
     <string name="exo_controls_rewind_description">રિવાઇન્ડ કરો</string>
-    <string name="exo_controls_shuffle_description">શફલ કરો</string>
+    <string name="exo_controls_show">પ્લેયર માટેના નિયંત્રણો બતાવો</string>
+    <string name="exo_controls_shuffle_off_description">શફલ બંધ છે</string>
+    <string name="exo_controls_shuffle_on_description">શફલ ચાલુ છે</string>
     <string name="exo_controls_stop_description">રોકો</string>
+    <string name="exo_controls_vr_description">VR મોડ</string>
     <string name="exo_download_completed">ડાઉનલોડ પૂર્ણ થયું</string>
     <string name="exo_download_description">ડાઉનલોડ કરો</string>
     <string name="exo_download_downloading">ડાઉનલોડ કરી રહ્યાં છીએ</string>
@@ -22,6 +26,10 @@
     <string name="exo_track_bitrate">%1$.2f Mbps</string>
     <string name="exo_track_mono">મૉનો</string>
     <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">વૈકલ્પિક</string>
+    <string name="exo_track_role_closed_captions">CC</string>
+    <string name="exo_track_role_commentary">કોમેન્ટ્રી</string>
+    <string name="exo_track_role_supplementary">પૂરક</string>
     <string name="exo_track_selection_auto">આપમેળે</string>
     <string name="exo_track_selection_none">એકપણ નહીં</string>
     <string name="exo_track_selection_title_audio">ઑડિઓ</string>

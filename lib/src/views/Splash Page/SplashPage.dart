@@ -11,6 +11,19 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   bool onLoading = true;
   Timer timer;
+
+  @override
+  void initState() {
+    super.initState();
+    loadingChange();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    timer.cancel();
+  }
+
   loadingChange() {
     timer = Timer(Duration(milliseconds: 3000), () {
       setState(() {
@@ -20,14 +33,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   @override
-  void dispose() {
-    super.dispose();
-    timer.cancel();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    loadingChange();
     return Container(
       color: Colors.black,
       child: Column(
@@ -46,7 +52,7 @@ class _SplashPageState extends State<SplashPage> {
               // clipBehavior: Clip(),
               elevation: 10,
               color: Colors.white,
-              onPressed: () {
+              onPressed: () async {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                     builder: (BuildContext context) => ListenPage()));
               },

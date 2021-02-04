@@ -2,6 +2,7 @@
 <resources>
     <string name="exo_controls_fastforward_description">Pārtīt uz priekšu</string>
     <string name="exo_controls_fullscreen_description">Pilnekrāna režīms</string>
+    <string name="exo_controls_hide">Slēpt atskaņotāja vadīklas</string>
     <string name="exo_controls_next_description">Nākamais ieraksts</string>
     <string name="exo_controls_pause_description">Pauzēt</string>
     <string name="exo_controls_play_description">Atskaņot</string>
@@ -10,8 +11,11 @@
     <string name="exo_controls_repeat_off_description">Neatkārtot nevienu</string>
     <string name="exo_controls_repeat_one_description">Atkārtot vienu</string>
     <string name="exo_controls_rewind_description">Attīt atpakaļ</string>
-    <string name="exo_controls_shuffle_description">Atskaņot jauktā secībā</string>
+    <string name="exo_controls_show">Rādīt atskaņotāja vadīklas</string>
+    <string name="exo_controls_shuffle_off_description">Atsk. jauktā secībā izslēgta</string>
+    <string name="exo_controls_shuffle_on_description">Atsk. jauktā secībā ieslēgta</string>
     <string name="exo_controls_stop_description">Apturēt</string>
+    <string name="exo_controls_vr_description">VR režīms</string>
     <string name="exo_download_completed">Lejupielāde ir pabeigta</string>
     <string name="exo_download_description">Lejupielādēt</string>
     <string name="exo_download_downloading">Notiek lejupielāde</string>
@@ -22,6 +26,10 @@
     <string name="exo_track_bitrate">%1$.2f Mb/s</string>
     <string name="exo_track_mono">Mono</string>
     <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Cits</string>
+    <string name="exo_track_role_closed_captions">Slēgtie paraksti</string>
+    <string name="exo_track_role_commentary">Komentāri</string>
+    <string name="exo_track_role_supplementary">Papildu</string>
     <string name="exo_track_selection_auto">Automātisks</string>
     <string name="exo_track_selection_none">Nav</string>
     <string name="exo_track_selection_title_audio">Audio</string>

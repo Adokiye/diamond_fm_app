@@ -2,6 +2,7 @@
 <resources>
     <string name="exo_controls_fastforward_description">Spóla áfram</string>
     <string name="exo_controls_fullscreen_description">Allur skjárinn</string>
+    <string name="exo_controls_hide">Fela spilunarstýringar</string>
     <string name="exo_controls_next_description">Næsta lag</string>
     <string name="exo_controls_pause_description">Hlé</string>
     <string name="exo_controls_play_description">Spila</string>
@@ -10,8 +11,11 @@
     <string name="exo_controls_repeat_off_description">Endurtaka ekkert</string>
     <string name="exo_controls_repeat_one_description">Endurtaka eitt</string>
     <string name="exo_controls_rewind_description">Spóla til baka</string>
-    <string name="exo_controls_shuffle_description">Stokka</string>
+    <string name="exo_controls_show">Sýna spilunarstýringar</string>
+    <string name="exo_controls_shuffle_off_description">Slökkt á stokkun</string>
+    <string name="exo_controls_shuffle_on_description">Kveikt á stokkun</string>
     <string name="exo_controls_stop_description">Stöðva</string>
+    <string name="exo_controls_vr_description">sýndarveruleikastilling</string>
     <string name="exo_download_completed">Niðurhali lokið</string>
     <string name="exo_download_description">Sækja</string>
     <string name="exo_download_downloading">Sækir</string>
@@ -22,6 +26,10 @@
     <string name="exo_track_bitrate">%1$.2f Mb/sek.</string>
     <string name="exo_track_mono">Einóma</string>
     <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Annað</string>
+    <string name="exo_track_role_closed_captions">Skjátextar</string>
+    <string name="exo_track_role_commentary">Lýsingar</string>
+    <string name="exo_track_role_supplementary">Auka</string>
     <string name="exo_track_selection_auto">Sjálfvirkt</string>
     <string name="exo_track_selection_none">Ekkert</string>
     <string name="exo_track_selection_title_audio">Hljóð</string>
