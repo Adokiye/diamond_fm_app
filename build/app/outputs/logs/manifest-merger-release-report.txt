@@ -5,6 +5,8 @@ INJECTED from C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamo
 INJECTED from C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\android\app\src\main\AndroidManifest.xml:1:1-50:12
 INJECTED from C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\android\app\src\main\AndroidManifest.xml:1:1-50:12
 MERGED from [:flutter_radio] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\flutter_radio\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
+MERGED from [:volume] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\volume\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
+MERGED from [:system_shortcuts] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\system_shortcuts\intermediates\library_manifest\release\AndroidManifest.xml:2:1-12:12
 MERGED from [:webview_flutter] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\webview_flutter\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.exoplayer:exoplayer:2.8.2] C:\Users\Abdulwahab\.gradle\caches\transforms-2\files-2.1\7d0945fe347a4a612287a8cd0fc6c16b\exoplayer-2.8.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.webkit:webkit:1.0.0] C:\Users\Abdulwahab\.gradle\caches\transforms-2\files-2.1\e6b1c804849fbf3a96135de6255bcce0\webkit-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -116,6 +118,10 @@ INJECTED from C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamo
 INJECTED from C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\android\app\src\main\AndroidManifest.xml
 MERGED from [:flutter_radio] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\flutter_radio\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_radio] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\flutter_radio\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:volume] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\volume\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:volume] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\volume\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:system_shortcuts] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\system_shortcuts\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
+MERGED from [:system_shortcuts] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\system_shortcuts\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [:webview_flutter] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\webview_flutter\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [:webview_flutter] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\webview_flutter\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.exoplayer:exoplayer:2.8.2] C:\Users\Abdulwahab\.gradle\caches\transforms-2\files-2.1\7d0945fe347a4a612287a8cd0fc6c16b\exoplayer-2.8.2\AndroidManifest.xml:20:5-22:41
@@ -170,6 +176,22 @@ INJECTED from C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamo
 		INJECTED from C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\android\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\android\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [:system_shortcuts] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\system_shortcuts\intermediates\library_manifest\release\AndroidManifest.xml:7:5-76
+	android:name
+		ADDED from [:system_shortcuts] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\system_shortcuts\intermediates\library_manifest\release\AndroidManifest.xml:7:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from [:system_shortcuts] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\system_shortcuts\intermediates\library_manifest\release\AndroidManifest.xml:8:5-76
+	android:name
+		ADDED from [:system_shortcuts] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\system_shortcuts\intermediates\library_manifest\release\AndroidManifest.xml:8:22-73
+uses-permission#android.permission.BLUETOOTH
+ADDED from [:system_shortcuts] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\system_shortcuts\intermediates\library_manifest\release\AndroidManifest.xml:9:5-68
+	android:name
+		ADDED from [:system_shortcuts] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\system_shortcuts\intermediates\library_manifest\release\AndroidManifest.xml:9:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from [:system_shortcuts] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\system_shortcuts\intermediates\library_manifest\release\AndroidManifest.xml:10:5-74
+	android:name
+		ADDED from [:system_shortcuts] C:\Users\Abdulwahab\Documents\Flutter with Firebase Projects\diamond_fm_app\build\system_shortcuts\intermediates\library_manifest\release\AndroidManifest.xml:10:22-71
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.android.exoplayer:exoplayer-core:2.8.2] C:\Users\Abdulwahab\.gradle\caches\transforms-2\files-2.1\f14d3ee0c78ca0c884604039374037b1\jetified-exoplayer-core-2.8.2\AndroidManifest.xml:24:5-79
 	android:name

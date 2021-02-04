@@ -701,7 +701,9 @@ Referenced Strings:
   amp
   android
   android.hardware.vr.high_performance
+  android.intent.action.MAIN
   android.intent.action.RUN
+  android.intent.category.HOME
   android.media.action.HDMI_AUDIO_PLUG
   android.media.extra.AUDIO_PLUG_STATE
   android.media.extra.ENCODINGS
@@ -792,6 +794,7 @@ Referenced Strings:
   avcC
   azure
   b
+  back
   background
   backgroundColor
   background_mode
@@ -812,6 +815,7 @@ Referenced Strings:
   black
   blanchedalmond
   blue
+  bluetooth
   blueviolet
   body
   bold
@@ -842,6 +846,8 @@ Referenced Strings:
   channelCount.caps
   character
   chartreuse
+  checkBluetooth
+  checkWifi
   chocolate
   clcp
   clearCache
@@ -874,6 +880,7 @@ Referenced Strings:
   content
   context
   contextMenu
+  controlVolume
   copy
   coral
   cornflowerblue
@@ -1028,6 +1035,7 @@ Referenced Strings:
   getFactory
   getIBinder
   getLatency
+  getMaxVol
   getParentNodeId
   getResId
   getResPackage
@@ -1035,6 +1043,7 @@ Referenced Strings:
   getScrollY
   getSourceNodeId
   getTitle
+  getVol
   ghostwhite
   givenName
   gnre
@@ -1067,6 +1076,7 @@ Referenced Strings:
   hev1
   hints
   hls
+  home
   honeydew
   hostLookup
   hotpink
@@ -1231,6 +1241,7 @@ Referenced Strings:
   neg_
   newPassword
   newUsername
+  newVol
   noDrop
   nodeId
   nolinethrough
@@ -1251,6 +1262,8 @@ Referenced Strings:
   orangered
   orchid
   org.chromium.support_lib_glue.Support...
+  orientLandscape
+  orientPortrait
   origin
   overlay
   p
@@ -1380,9 +1393,11 @@ Referenced Strings:
   setDirection
   setInitialRoute
   setLocale
+  setVol
   settings
   sgpd
   show
+  showVolumeUiFlag
   sidx
   sienna
   signed
@@ -1423,6 +1438,7 @@ Referenced Strings:
   steelblue
   stop
   stpp
+  streamType
   streamUrl
   streetAddress
   stsc
@@ -1442,6 +1458,7 @@ Referenced Strings:
   systemNavigationBarColor
   systemNavigationBarDividerColor
   systemNavigationBarIconBrightness
+  system_shortcuts
   t
   t0
   tan
@@ -1527,6 +1544,9 @@ Referenced Strings:
   villeplus
   violet
   vmhd
+  volDown
+  volUp
+  volume
   vorbis
   vp08
   vp09
@@ -1542,6 +1562,7 @@ Referenced Strings:
   white
   whitesmoke
   width
+  wifi
   window
   woods_f
   write
