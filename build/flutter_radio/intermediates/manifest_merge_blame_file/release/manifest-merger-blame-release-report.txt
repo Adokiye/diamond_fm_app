@@ -3,6 +3,6 @@
 3    package="br.com.thyagoluciano.flutterradio" >
 4
 5    <uses-sdk android:minSdkVersion="16" />
-5-->C:\src\flutter\.pub-cache\hosted\pub.dartlang.org\flutter_radio-0.1.8\android\src\main\AndroidManifest.xml
+5-->/Users/adokiye/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_radio-0.1.8/android/src/main/AndroidManifest.xml
 6
 7</manifest>
