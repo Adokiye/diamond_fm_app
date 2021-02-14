@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 Widget loadingCircle() {
   return Center(
     child: SpinKitCircle(
-      color: Colors.lightGreenAccent[200],
+      color: Color(0xffB4D433),
       size: 50,
     ),
   );

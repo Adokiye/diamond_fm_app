@@ -28,6 +28,7 @@ dependencies:
   http: ^0.12.2
   flutter_radio: ^0.1.8
   html: ^0.14.0+4
+  volume: ^1.0.1
 
 
   # The following adds the Cupertino Icons font to your application.
