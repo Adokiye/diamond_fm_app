@@ -15,7 +15,7 @@ class _MyScaffoldState extends State<MyScaffold> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: MenuBar(),
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xff06060c),
       appBar: appBarView(title: widget.title),
       body: widget.body,
     );

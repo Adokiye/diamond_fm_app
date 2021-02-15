@@ -2,6 +2,7 @@ import 'package:diamond_fm_app/src/views/News%20Page/NewsPage.dart';
 import 'package:diamond_fm_app/src/views/Social%20Media%20Page/SocialMediaPage.dart';
 import 'package:diamond_fm_app/src/views/home/ListenPage.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MenuBar extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class _MenuBarState extends State<MenuBar> {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: Colors.black,
+        color: Color(0xff06060c),
         child: Padding(
           padding: const EdgeInsets.only(left: 20.0, top: 30),
           child: Column(
@@ -76,11 +77,7 @@ class _MenuBarState extends State<MenuBar> {
                   SizedBox(
                     width: 30,
                   ),
-                  Container(
-                    color: Colors.transparent,
-                    height: 24,
-                    width: 24,
-                    child: GestureDetector(
+                   GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (BuildContext context) => SocialMediaPage(
@@ -88,40 +85,30 @@ class _MenuBarState extends State<MenuBar> {
                                       'https://www.facebook.com/diamond887fmilorin/',
                                 )));
                       },
-                      child: Image.asset('assets/facebooklogo.png'),
-                    ),
-                  ),
+                      child:FaIcon(FontAwesomeIcons.facebook,color: Color(0xffb4d433),size: 24,)),
                   SizedBox(
                     width: 30,
                   ),
-                  Container(
-                    height: 24,
-                    width: 24,
-                    child: GestureDetector(
+                  GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (BuildContext context) => SocialMediaPage(
                                   url: 'https://twitter.com/diamond887fm',
                                 )));
                       },
-                      child: Image.asset('assets/twitterlogo.png'),
+                      child: FaIcon(FontAwesomeIcons.twitter,color: Color(0xffb4d433),size: 24,),
                     ),
-                  ),
                   SizedBox(
                     width: 30,
                   ),
-                  Container(
-                    height: 24,
-                    width: 24,
-                    child: GestureDetector(
+               GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (BuildContext context) => SocialMediaPage(
                                 url: 'https://instagram.com/diamond887fm/')));
                       },
-                      child: Image.asset('assets/instagramlogo.png'),
+                      child: FaIcon(FontAwesomeIcons.instagram,color: Color(0xffb4d433),size: 24,),
                     ),
-                  ),
                 ],
               ),
             ],

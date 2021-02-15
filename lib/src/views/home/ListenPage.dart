@@ -79,11 +79,11 @@ class _ListenPageState extends State<ListenPage> {
     // bool onPlay = assetsAudioPlayer.isPlaying.value;
     return MyScaffold(
         title: 'Listen',
-        body: Stack(alignment: Alignment.center, children: [
-          ListView(
-            children: [
-              Container(
-                color: Color(0xFF000015),
+        body: Column(crossAxisAlignment: CrossAxisAlignment.center, 
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+                color: Color(0xFF0d0d1b),
                 width: double.infinity,
                 child: Column(
                   children: [
@@ -91,7 +91,7 @@ class _ListenPageState extends State<ListenPage> {
                       height: 30,
                     ),
                     CircleAvatar(
-                      backgroundColor: Color(0xffB4D433),
+                      backgroundColor: Color(0xff0d0d1b),
                       radius: 123,
                       child: CircleAvatar(
                         backgroundColor: Color(0xFF000015),
@@ -124,6 +124,9 @@ class _ListenPageState extends State<ListenPage> {
                         )),
                     SizedBox(
                       height: 5,
+                    ),
+                     SizedBox(
+                      height: 30,
                     ),
                   ],
                 ),
@@ -189,8 +192,13 @@ class _ListenPageState extends State<ListenPage> {
                         ),
                       ],
                     ),
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.3,
+               
+                  ],
+                ),
+                
+              ),
+                   Container(
+                      height: MediaQuery.of(context).size.height * 0.2,
                       width: MediaQuery.of(context).size.width,
                       child: new Container(
                         decoration: BoxDecoration(
@@ -227,12 +235,9 @@ class _ListenPageState extends State<ListenPage> {
                                 ))),
                       ),
                     ),
-                  ],
-                ),
-              ),
             ],
           ),
-        ]));
+        );
   }
 
   Future playingStatus() async {

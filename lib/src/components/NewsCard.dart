@@ -25,27 +25,32 @@ class NewsCard extends StatelessWidget {
           //             )));
         },
         child: Container(
-          margin: EdgeInsets.all(16),
+          margin: EdgeInsets.all(0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               ClipRRect(
                   borderRadius: BorderRadius.circular(6),
                   child: Image.network(article.image)),
-              Text(
+              Padding(
+                padding: EdgeInsets.all(8),
+                child:Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[Text(
                 article.title,
                 textAlign: TextAlign.start,
                 style: TextStyle(
-                    color: Color(0xffF7921E),
+                    color: Color(0xffb4d433),
                     fontSize: 18,
                     fontWeight: FontWeight.w500),
               ),
               SizedBox(
                 height: 8,
               ),
-              Text(
-                '${article.body.characters.take(60)}...',
-                style: TextStyle(color: Colors.white, fontSize: 17),
-              ),
+              // Text(
+              //   '${article.body.characters.take(60)}...',
+              //   style: TextStyle(color: Colors.white, fontSize: 17),
+              // ),
               FlatButton(
                 color: Colors.black87,
                 onPressed: () {
@@ -60,7 +65,7 @@ class NewsCard extends StatelessWidget {
                   'Read More',
                   style: TextStyle(color: Color(0xFFB64100)),
                 ),
-              ),
+              ),]))
             ],
           ),
         ),

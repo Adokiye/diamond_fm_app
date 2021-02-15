@@ -27,7 +27,7 @@ class _NewsArticleViewState extends State<NewsArticleView> {
         padding:
             const EdgeInsets.only(top: 10, left: 15, right: 15, bottom: 10),
         child: Container(
-          color: Color(0xFF302B54),
+          color: Color(0xFF121219),
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: ListView(
