@@ -1,8 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter_radio/flutter_radio.dart';
 import 'package:diamond_fm_app/src/components/MyScaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:volume/volume.dart';
-
+import 'package:volume_control/volume_control.dart';
 
 class ListenPage extends StatefulWidget {
   @override
@@ -11,11 +13,12 @@ class ListenPage extends StatefulWidget {
 
 class _ListenPageState extends State<ListenPage> {
   int maxVolume;
-  int currentVolume;
-  double _currentSliderValue = 15;
+  double currentVolume = 0.5;
+  double _currentSliderValue = 0.5;
   // final assetsAudioPlayer = AssetsAudioPlayer();
   bool onPlay = false;
   String radioUrl = 'http://95.110.227.3:8000/diamond';
+  Timer timer;
 
   @override
   void initState() {
@@ -25,18 +28,40 @@ class _ListenPageState extends State<ListenPage> {
     audioStart();
   }
 
+  //old doesn't support ios
+  // Future<void> initVolumeState() async {
+  //   await Volume.controlVolume(AudioManager.STREAM_MUSIC);
+  // }
+
+  //init volume_control plugin
   Future<void> initVolumeState() async {
-    await Volume.controlVolume(AudioManager.STREAM_MUSIC);
+    if (!mounted) return;
+
+    //read the current volume
+    double _val = await VolumeControl.volume;
+    setState(() {
+      currentVolume = _val;
+    });
+    print('current' + currentVolume.toString());
   }
 
   updateVolume() async {
-    maxVolume = await Volume.getMaxVol;
-    currentVolume = await Volume.getVol;
-    _currentSliderValue = currentVolume.toDouble();
+    //maxVolume = await VolumeControl.;
+    double _val = await VolumeControl.volume;
+
+    setState(() {
+      currentVolume = _val;
+    });
+    print('current' + currentVolume.toString());
+
+    //  _currentSliderValue = currentVolume;
   }
 
-  setVolume(int i) async {
-    await Volume.setVol(i);
+  setVolume(double i) async {
+    await VolumeControl.setVolume(i);
+      setState(() {
+      currentVolume = i;
+    });
   }
 
   Future<void> audioStart() async {
@@ -118,30 +143,32 @@ class _ListenPageState extends State<ListenPage> {
                           ),
                           onPressed: () async {
                             setState(() {
-                              if (_currentSliderValue >= 1.0) {
-                                _currentSliderValue = _currentSliderValue - 1.0;
+                              if (currentVolume >= 0.1) {
+                                currentVolume = currentVolume - 0.1;
                               }
                             });
-                            await setVolume(_currentSliderValue.toInt());
-                            await updateVolume();
+                            await setVolume(currentVolume);
+                            //    await updateVolume();
                           },
                         ),
                         Expanded(
                             child: Slider.adaptive(
                           activeColor: Color(0xffB4D433),
                           inactiveColor: Colors.white,
-                          value: _currentSliderValue,
+                          value: currentVolume,
                           min: 0,
-                          max: 15,
-                          divisions: 15,
-                          label: _currentSliderValue.round().toString(),
+                          max: 1,
+                          divisions: 100,
+                          label: (currentVolume*100).toString(),
                           onChanged: (double value) async {
-                            setState(() {
-                              _currentSliderValue = value;
+                            //use timer for the smoother sliding
+                            timer =
+                                Timer(Duration(milliseconds: 200), () async {
+                              await setVolume(value);
+                           //   await updateVolume();
                             });
 
-                            await setVolume(_currentSliderValue.toInt());
-                            await updateVolume();
+                            print("val:${value}");
                           },
                         )),
                         IconButton(
@@ -151,13 +178,13 @@ class _ListenPageState extends State<ListenPage> {
                           ),
                           onPressed: () async {
                             setState(() {
-                              if (_currentSliderValue <= 14.0) {
-                                _currentSliderValue = _currentSliderValue + 1.0;
+                              if (currentVolume <= 0.9) {
+                                currentVolume = currentVolume + 0.1;
                               }
                             });
 
-                            await setVolume(_currentSliderValue.toInt());
-                            await updateVolume();
+                            await setVolume(currentVolume);
+                            //  await updateVolume();
                           },
                         ),
                       ],

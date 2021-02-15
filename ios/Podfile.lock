@@ -2,12 +2,18 @@ PODS:
   - Flutter (1.0.0)
   - flutter_radio (0.0.1):
     - Flutter
+  - system_shortcuts (0.0.1):
+    - Flutter
+  - volume_control (0.0.1):
+    - Flutter
   - webview_flutter (0.0.1):
     - Flutter
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - flutter_radio (from `.symlinks/plugins/flutter_radio/ios`)
+  - system_shortcuts (from `.symlinks/plugins/system_shortcuts/ios`)
+  - volume_control (from `.symlinks/plugins/volume_control/ios`)
   - webview_flutter (from `.symlinks/plugins/webview_flutter/ios`)
 
 EXTERNAL SOURCES:
@@ -15,12 +21,18 @@ EXTERNAL SOURCES:
     :path: Flutter
   flutter_radio:
     :path: ".symlinks/plugins/flutter_radio/ios"
+  system_shortcuts:
+    :path: ".symlinks/plugins/system_shortcuts/ios"
+  volume_control:
+    :path: ".symlinks/plugins/volume_control/ios"
   webview_flutter:
     :path: ".symlinks/plugins/webview_flutter/ios"
 
 SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   flutter_radio: 852f82f0ecb1ea21ce24bc3724e95196c6c7c936
+  system_shortcuts: fa91743cc51eed3811f5ea5461e23f972b9de780
+  volume_control: ae2b373c092d9ff5e57f704e9fa5e3098cc16d07
   webview_flutter: d2b4d6c66968ad042ad94cbb791f5b72b4678a96
 
 PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c

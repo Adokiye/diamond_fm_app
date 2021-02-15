@@ -257,12 +257,16 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh",
 				"${PODS_ROOT}/../Flutter/Flutter.framework",
 				"${BUILT_PRODUCTS_DIR}/flutter_radio/flutter_radio.framework",
+				"${BUILT_PRODUCTS_DIR}/system_shortcuts/system_shortcuts.framework",
+				"${BUILT_PRODUCTS_DIR}/volume_control/volume_control.framework",
 				"${BUILT_PRODUCTS_DIR}/webview_flutter/webview_flutter.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flutter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/flutter_radio.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/system_shortcuts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/volume_control.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/webview_flutter.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
