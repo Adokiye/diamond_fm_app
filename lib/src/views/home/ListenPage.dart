@@ -162,7 +162,7 @@ class _ListenPageState extends State<ListenPage> {
                           min: 0,
                           max: 1,
                           divisions: 100,
-                          label: (currentVolume*100).toString(),
+                          label: (currentVolume*100).round().toString(),
                           onChanged: (double value) async {
                             //use timer for the smoother sliding
                             timer =
