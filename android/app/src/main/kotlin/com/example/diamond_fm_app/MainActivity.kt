@@ -1,4 +1,4 @@
-package com.example.diamond_fm_app
+package com.diamond_fm_app
 
 import io.flutter.embedding.android.FlutterActivity
 

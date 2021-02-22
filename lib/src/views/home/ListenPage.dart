@@ -17,7 +17,7 @@ class _ListenPageState extends State<ListenPage> {
   double _currentSliderValue = 0.5;
   // final assetsAudioPlayer = AssetsAudioPlayer();
   bool onPlay = false;
-  String radioUrl = 'http://95.110.227.3:8000/diamond';
+  String radioUrl = 'https://streams.radiomast.io/4b6d766f-3b8a-422a-ab07-822a1738ff2f';
   Timer timer;
 
   @override
