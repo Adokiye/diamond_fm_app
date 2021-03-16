@@ -48,7 +48,7 @@ class _SplashPageState extends State<SplashPage> {
           Spacer(),
               Container(
              height: MediaQuery.of(context).size.height*0.5,
-                width: MediaQuery.of(context).size.width*0.9,
+                width: MediaQuery.of(context).size.width*0.5,
                 child:Image.asset('assets/diamondfm.png')),
             Text('Shining Supreme',
             style: TextStyle(color: Colors.red, fontSize: 32),),

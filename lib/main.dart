@@ -1,3 +1,4 @@
+import 'package:audio_service/audio_service.dart';
 import 'package:diamond_fm_app/src/views/Splash%20Page/SplashPage.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Axiforma'
       ),
-      home: SplashPage(),
+      home:AudioServiceWidget(child: SplashPage()),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:audio_service/audio_service.dart';
 import 'package:flutter_radio/flutter_radio.dart';
 import 'package:diamond_fm_app/src/components/MyScaffold.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,24 @@ class _ListenPageState extends State<ListenPage> {
     initVolumeState();
     updateVolume();
     audioStart();
+
   }
+
+  void _backgroundAudioPlayerTask() async {
+  CustomAudioPlayer player = CustomAudioPlayer();
+  AudioServiceBackground.run(
+    (){
+     
+    }
+    //
+    
+     'onStart': (){},
+    // onPlay: player.play,
+    // onPause: player.pause,
+    // onStop: player.stop,
+    // onClick: (MediaButton button) => player.playPause(),
+  );
+}
 
   //old doesn't support ios
   // Future<void> initVolumeState() async {
@@ -66,7 +84,9 @@ class _ListenPageState extends State<ListenPage> {
 
   Future<void> audioStart() async {
     if (!await FlutterRadio.isPlaying()) {
-      await FlutterRadio.audioStart();
+    //  await AudioService.start(backgroundTaskEntrypoint:()async=> await FlutterRadio.audioStart());
+
+//await AudioService.stop();
     } else {
       setState(() {
         onPlay = true;
@@ -101,7 +121,9 @@ class _ListenPageState extends State<ListenPage> {
                             padding: const EdgeInsets.all(10.0),
                             child: Image(
                               fit: BoxFit.cover,
-                              image: AssetImage('assets/diamondfm.png'),
+                               width:200,height:200,
+                              image: AssetImage('assets/diamondfm.png',
+                             ),
                             ),
                           ),
                         ),
@@ -113,13 +135,15 @@ class _ListenPageState extends State<ListenPage> {
                     Text('Listen Live',
                         style: TextStyle(
                           color: Color(0XFFF7921E),
-                          fontSize: 20,
+                          fontSize: 25,
                         )),
                     SizedBox(
                       height: 5,
                     ),
                     Text('Diamond FM 88.7',
                         style: TextStyle(
+                          fontSize: 23,
+
                           color: Colors.white,
                         )),
                     SizedBox(

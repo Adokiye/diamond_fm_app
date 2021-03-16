@@ -29,9 +29,9 @@ class NewsCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              ClipRRect(
+              Center(child: ClipRRect(
                   borderRadius: BorderRadius.circular(6),
-                  child: Image.network(article.image)),
+                  child: Image.network(article.image))),
               Padding(
                 padding: EdgeInsets.all(8),
                 child:Column(
