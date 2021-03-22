@@ -30,22 +30,6 @@ class _ListenPageState extends State<ListenPage> {
 
   }
 
-  void _backgroundAudioPlayerTask() async {
-  CustomAudioPlayer player = CustomAudioPlayer();
-  AudioServiceBackground.run(
-    (){
-     
-    }
-    //
-    
-     'onStart': (){},
-    // onPlay: player.play,
-    // onPause: player.pause,
-    // onStop: player.stop,
-    // onClick: (MediaButton button) => player.playPause(),
-  );
-}
-
   //old doesn't support ios
   // Future<void> initVolumeState() async {
   //   await Volume.controlVolume(AudioManager.STREAM_MUSIC);
@@ -82,11 +66,9 @@ class _ListenPageState extends State<ListenPage> {
     });
   }
 
-  Future<void> audioStart() async {
+ Future<void> audioStart() async {
     if (!await FlutterRadio.isPlaying()) {
-    //  await AudioService.start(backgroundTaskEntrypoint:()async=> await FlutterRadio.audioStart());
-
-//await AudioService.stop();
+      await FlutterRadio.audioStart();
     } else {
       setState(() {
         onPlay = true;
