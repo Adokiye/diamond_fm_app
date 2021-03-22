@@ -78,44 +78,46 @@ class CustomAudioPlayer extends BackgroundAudioTask {
 
   @override
   onStart(Map<String, dynamic> params) async {
-    AudioServiceBackground.setMediaItem(mediaItem);
-    AudioServiceBackground.setState(
+
+   await AudioServiceBackground.setMediaItem(mediaItem);
+    await audioStart();
+    
+   await AudioServiceBackground.setState(
         controls: [pauseControl, stopControl],
         playing: true,
         processingState: AudioProcessingState.ready);
-    await audioStart();
-    //onPlay();
+    onPlay();
     await _completer.future;
   }
 
   @override
-  Future<void> onPlay() {
-    AudioServiceBackground.setState(
+  onPlay()async{
+   await AudioServiceBackground.setState(
         controls: [pauseControl, stopControl],
         playing: true,
-        processingState: AudioProcessingState.ready);
-    return FlutterRadio.play(url: streamUrl);
+        processingState: AudioProcessingState.ready,);
+    await FlutterRadio.play(url: streamUrl);
   }
 
   @override
-  Future<void> onPause() {
-    AudioServiceBackground.setState(
+  Future<void> onPause() async{
+   await AudioServiceBackground.setState(
         controls: [playControl, stopControl],
         playing: false,
         processingState: AudioProcessingState.ready);
-    return FlutterRadio.pause(url: streamUrl);
+   await FlutterRadio.pause(url: streamUrl);
   }
 
   @override
   Future<void> onStop() async {
     await FlutterRadio.stop();
+    exit(0);
 
     await super.onStop();
     await AudioServiceBackground.setState(
         controls: [],
         playing: false,
         processingState: AudioProcessingState.stopped);
-    exit(0);
   }
 
   @override

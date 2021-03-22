@@ -47,17 +47,17 @@
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data
             android:name="flutterEmbedding"
-            android:value="2" />    
-      <service android:name="com.diamond_fm_app.audioservice.AudioService">
-        <intent-filter>
-          <action android:name="android.media.browse.MediaBrowserService" />
-        </intent-filter>
-      </service>
+            android:value="2" />
+        <service android:name="com.ryanheise.audioservice.AudioService">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
 
-      <receiver android:name="com.diamond_fm_app.audioservice.MediaButtonReceiver" >
-        <intent-filter>
-          <action android:name="android.intent.action.MEDIA_BUTTON" />
-        </intent-filter>
-      </receiver> 
+        <receiver android:name="com.ryanheise.audioservice.MediaButtonReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>
