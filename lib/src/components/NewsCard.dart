@@ -17,55 +17,58 @@ class NewsCard extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           //TODO
-          // Navigator.push(
-          //     context,
-          //     MaterialPageRoute(
-          //         builder: (context) => NewsArticleView(
-          //               articleUrl: url,
-          //             )));
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => NewsArticleView(
+                        article: article,
+                      )));
         },
         child: Container(
           margin: EdgeInsets.all(0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Center(child: ClipRRect(
-                  borderRadius: BorderRadius.circular(6),
-                  child: Image.network(article.image))),
+              Center(
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(6),
+                      child: Image.network(article.image))),
               Padding(
-                padding: EdgeInsets.all(8),
-                child:Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[Text(
-                article.title,
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                    color: Color(0xffb4d433),
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500),
-              ),
-              SizedBox(
-                height: 8,
-              ),
-              // Text(
-              //   '${article.body.characters.take(60)}...',
-              //   style: TextStyle(color: Colors.white, fontSize: 17),
-              // ),
-              FlatButton(
-                color: Colors.black87,
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => NewsArticleView(
-                                article: article,
-                              )));
-                },
-                child: Text(
-                  'Read More',
-                  style: TextStyle(color: Color(0xFFB64100)),
-                ),
-              ),]))
+                  padding: EdgeInsets.all(8),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          article.title,
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              color: Color(0xffb4d433),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        // Text(
+                        //   '${article.body.characters.take(60)}...',
+                        //   style: TextStyle(color: Colors.white, fontSize: 17),
+                        // ),
+                        FlatButton(
+                          color: Colors.black87,
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => NewsArticleView(
+                                          article: article,
+                                        )));
+                          },
+                          child: Text(
+                            'Read More',
+                            style: TextStyle(color: Color(0xFFB64100)),
+                          ),
+                        ),
+                      ]))
             ],
           ),
         ),
