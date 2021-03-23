@@ -30,12 +30,11 @@ class _ListenPageState extends State<ListenPage> {
 
   @override
   void initState() {
-    super.initState();
-    //player.initPlaying();
-
     initVolumeState();
     updateVolume();
     audioStart();
+    super.initState();
+    //player.initPlaying();
   }
 
 //   void _backgroundAudioPlayerTask() async {
@@ -90,7 +89,7 @@ class _ListenPageState extends State<ListenPage> {
     });
   }
 
- Future<void> audioStart() async {
+  Future<void> audioStart() async {
     if (!await FlutterRadio.isPlaying()) {
       await player.initPlaying();
       await FlutterRadio.audioStart();

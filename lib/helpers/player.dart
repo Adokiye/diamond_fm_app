@@ -78,34 +78,44 @@ class CustomAudioPlayer extends BackgroundAudioTask {
 
   @override
   onStart(Map<String, dynamic> params) async {
-
-   await AudioServiceBackground.setMediaItem(mediaItem);
+    await AudioServiceBackground.setMediaItem(mediaItem);
     await audioStart();
-    
-   await AudioServiceBackground.setState(
+    print('started audio');
+    await AudioServiceBackground.setState(
         controls: [pauseControl, stopControl],
         playing: true,
         processingState: AudioProcessingState.ready);
+    print('about to audio');
     onPlay();
+    print('played audio audio');
+
+    FlutterRadio.audioStart();
+
     await _completer.future;
   }
 
   @override
-  onPlay()async{
-   await AudioServiceBackground.setState(
-        controls: [pauseControl, stopControl],
-        playing: true,
-        processingState: AudioProcessingState.ready,);
-    await FlutterRadio.play(url: streamUrl);
+  onPlay() async {
+    await FlutterRadio.audioStart();
+    if (!await FlutterRadio.isPlaying()) {
+      await FlutterRadio.play(url: streamUrl);
+    }
+
+    await AudioServiceBackground.setState(
+      controls: [pauseControl, stopControl],
+      playing: true,
+      processingState: AudioProcessingState.ready,
+    );
   }
 
   @override
-  Future<void> onPause() async{
-   await AudioServiceBackground.setState(
+  Future<void> onPause() async {
+    await FlutterRadio.audioStart();
+    await FlutterRadio.pause(url: streamUrl);
+    await AudioServiceBackground.setState(
         controls: [playControl, stopControl],
         playing: false,
         processingState: AudioProcessingState.ready);
-   await FlutterRadio.pause(url: streamUrl);
   }
 
   @override
@@ -119,6 +129,17 @@ class CustomAudioPlayer extends BackgroundAudioTask {
         playing: false,
         processingState: AudioProcessingState.stopped);
   }
+
+  // @override
+  // Future setState({
+  //   AudioProcessingState processingState,
+  // }) {
+  //   return AudioServiceBackground.setMediaItem(MediaItem(
+  //       id: params['mediaID'],
+  //       album: params['mediaAlbum'],
+  //       title: params['mediaTitle'],
+  //       artUri: params['mediaCover']));
+  // }
 
   @override
   Future onCustomAction(_function, params) {
