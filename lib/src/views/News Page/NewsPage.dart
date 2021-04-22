@@ -37,8 +37,7 @@ class _NewsPageState extends State<NewsPage> {
 
     return WillPopScope(
       onWillPop: () async {
-        Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (BuildContext context) => ListenPage()));
+        Navigator.of(context).pushReplacementNamed('/listen');
         return false;
       },
       child: MyScaffold(

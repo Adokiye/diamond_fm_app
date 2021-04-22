@@ -1,21 +1,7 @@
 PODS:
-  - audio_service (0.0.1):
-    - Flutter
-  - audio_session (0.0.1):
-    - Flutter
   - Flutter (1.0.0)
-  - flutter_isolate (0.0.1):
+  - streaming_radio_flutter_plugin (0.0.1):
     - Flutter
-  - flutter_radio (0.0.1):
-    - Flutter
-  - FMDB (2.7.5):
-    - FMDB/standard (= 2.7.5)
-  - FMDB/standard (2.7.5)
-  - path_provider (0.0.1):
-    - Flutter
-  - sqflite (0.0.2):
-    - Flutter
-    - FMDB (>= 2.7.5)
   - system_shortcuts (0.0.1):
     - Flutter
   - volume_control (0.0.1):
@@ -24,36 +10,17 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
-  - audio_service (from `.symlinks/plugins/audio_service/ios`)
-  - audio_session (from `.symlinks/plugins/audio_session/ios`)
   - Flutter (from `Flutter`)
-  - flutter_isolate (from `.symlinks/plugins/flutter_isolate/ios`)
-  - flutter_radio (from `.symlinks/plugins/flutter_radio/ios`)
-  - path_provider (from `.symlinks/plugins/path_provider/ios`)
-  - sqflite (from `.symlinks/plugins/sqflite/ios`)
+  - streaming_radio_flutter_plugin (from `.symlinks/plugins/streaming_radio_flutter_plugin/ios`)
   - system_shortcuts (from `.symlinks/plugins/system_shortcuts/ios`)
   - volume_control (from `.symlinks/plugins/volume_control/ios`)
   - webview_flutter (from `.symlinks/plugins/webview_flutter/ios`)
 
-SPEC REPOS:
-  trunk:
-    - FMDB
-
 EXTERNAL SOURCES:
-  audio_service:
-    :path: ".symlinks/plugins/audio_service/ios"
-  audio_session:
-    :path: ".symlinks/plugins/audio_session/ios"
   Flutter:
     :path: Flutter
-  flutter_isolate:
-    :path: ".symlinks/plugins/flutter_isolate/ios"
-  flutter_radio:
-    :path: ".symlinks/plugins/flutter_radio/ios"
-  path_provider:
-    :path: ".symlinks/plugins/path_provider/ios"
-  sqflite:
-    :path: ".symlinks/plugins/sqflite/ios"
+  streaming_radio_flutter_plugin:
+    :path: ".symlinks/plugins/streaming_radio_flutter_plugin/ios"
   system_shortcuts:
     :path: ".symlinks/plugins/system_shortcuts/ios"
   volume_control:
@@ -62,14 +29,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/webview_flutter/ios"
 
 SPEC CHECKSUMS:
-  audio_service: f509d65da41b9521a61f1c404dd58651f265a567
-  audio_session: 4f3e461722055d21515cf3261b64c973c062f345
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
-  flutter_isolate: 0edf5081826d071adf21759d1eb10ff5c24503b5
-  flutter_radio: 852f82f0ecb1ea21ce24bc3724e95196c6c7c936
-  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
-  sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
+  streaming_radio_flutter_plugin: 89c11d0c0c74f98685ef7fffaeaf604897334eba
   system_shortcuts: fa91743cc51eed3811f5ea5461e23f972b9de780
   volume_control: ae2b373c092d9ff5e57f704e9fa5e3098cc16d07
   webview_flutter: d2b4d6c66968ad042ad94cbb791f5b72b4678a96

@@ -19,8 +19,7 @@ class _SocialMediaPageState extends State<SocialMediaPage> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (BuildContext context) => ListenPage()));
+        Navigator.of(context).pushReplacementNamed('/listen');
         return false;
       },
       child: MyScaffold(

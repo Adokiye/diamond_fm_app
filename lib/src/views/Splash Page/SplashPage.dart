@@ -31,11 +31,7 @@ class _SplashPageState extends State<SplashPage> {
       setState(() {
         onLoading = false;
       });
-      return Platform.isAndroid
-          ? Navigator.of(context).pushReplacement(MaterialPageRoute(
-              builder: (BuildContext context) => ListenPageAndroid()))
-          : Navigator.of(context).pushReplacement(MaterialPageRoute(
-              builder: (BuildContext context) => ListenPage()));
+      return Navigator.of(context).pushReplacementNamed('/listen');
     });
   }
 

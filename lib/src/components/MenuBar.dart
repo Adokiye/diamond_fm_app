@@ -40,8 +40,11 @@ class _MenuBarState extends State<MenuBar> {
                       style: TextStyle(color: Color(0xffB4D433)),
                     ),
                     onTap: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (BuildContext context) => ListenPage()));
+                      if (ModalRoute.of(context).settings.name != '/listen') {
+                        Navigator.of(context).pushReplacementNamed('/listen');
+                      } else {
+                        Navigator.of(context).pop();
+                      }
                     },
                   ),
                   ListTile(
@@ -51,8 +54,11 @@ class _MenuBarState extends State<MenuBar> {
                       style: TextStyle(color: Color(0xffB4D433)),
                     ),
                     onTap: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (BuildContext context) => NewsPage()));
+                      if (ModalRoute.of(context).settings.name != '/news') {
+                        Navigator.of(context).pushReplacementNamed('/news');
+                      } else {
+                        Navigator.of(context).pop();
+                      }
                     },
                   ),
                   ListTile(
@@ -77,7 +83,7 @@ class _MenuBarState extends State<MenuBar> {
                   SizedBox(
                     width: 30,
                   ),
-                   GestureDetector(
+                  GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (BuildContext context) => SocialMediaPage(
@@ -85,30 +91,42 @@ class _MenuBarState extends State<MenuBar> {
                                       'https://www.facebook.com/diamond887fmilorin/',
                                 )));
                       },
-                      child:FaIcon(FontAwesomeIcons.facebook,color: Color(0xffb4d433),size: 24,)),
+                      child: FaIcon(
+                        FontAwesomeIcons.facebook,
+                        color: Color(0xffb4d433),
+                        size: 24,
+                      )),
                   SizedBox(
                     width: 30,
                   ),
                   GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
-                            builder: (BuildContext context) => SocialMediaPage(
-                                  url: 'https://twitter.com/diamond887fm',
-                                )));
-                      },
-                      child: FaIcon(FontAwesomeIcons.twitter,color: Color(0xffb4d433),size: 24,),
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext context) => SocialMediaPage(
+                                url: 'https://twitter.com/diamond887fm',
+                              )));
+                    },
+                    child: FaIcon(
+                      FontAwesomeIcons.twitter,
+                      color: Color(0xffb4d433),
+                      size: 24,
                     ),
+                  ),
                   SizedBox(
                     width: 30,
                   ),
-               GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
-                            builder: (BuildContext context) => SocialMediaPage(
-                                url: 'https://instagram.com/diamond887fm/')));
-                      },
-                      child: FaIcon(FontAwesomeIcons.instagram,color: Color(0xffb4d433),size: 24,),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext context) => SocialMediaPage(
+                              url: 'https://instagram.com/diamond887fm/')));
+                    },
+                    child: FaIcon(
+                      FontAwesomeIcons.instagram,
+                      color: Color(0xffb4d433),
+                      size: 24,
                     ),
+                  ),
                 ],
               ),
             ],

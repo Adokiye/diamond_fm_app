@@ -14,7 +14,7 @@ class News {
   Future<void> getNews() async {
     String url = 'https://diamondfm.net/get-news';
     //'http://newsapi.org/v2/top-headlines?country=ng&apiKey=f34a971b04f6412aaf0655956268448e';
-    var response = await http.post(url, body: {
+    var response = await http.post(Uri.parse(url), body: {
       'key': 'e4cdb181895402c964f257b6492a226b',
     });
     var jsonData = jsonDecode(response.body);
