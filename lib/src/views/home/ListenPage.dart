@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'dart:io';
 
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:diamond_fm_app/src/components/MyScaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,6 +14,7 @@ class ListenPage extends StatefulWidget {
 
 class _ListenPageState extends State<ListenPage> {
   var streamingController = StreamingController();
+  final assetsAudioPlayer = AssetsAudioPlayer();
   int maxVolume;
   double currentVolume = 0.5;
 
@@ -25,6 +28,9 @@ class _ListenPageState extends State<ListenPage> {
   void initState() {
     initVolumeState();
     updateVolume();
+    if (Platform.isIOS) {
+      initRadio();
+    }
     streamingController.config(
         url:
             'https://streams.radiomast.io/4b6d766f-3b8a-422a-ab07-822a1738ff2f');
@@ -128,25 +134,36 @@ class _ListenPageState extends State<ListenPage> {
                               currentVolume = currentVolume - 0.1;
                             }
                           });
-                          await setVolume(currentVolume);
+                          Platform.isIOS
+                              ? assetsAudioPlayer.setVolume(currentVolume)
+                              : setVolume(currentVolume);
                         },
                       ),
-                      Expanded(
-                          child: Slider.adaptive(
-                        activeColor: Color(0xffB4D433),
-                        inactiveColor: Colors.white,
-                        value: currentVolume,
-                        min: 0,
-                        max: 1,
-                        divisions: 100,
-                        label: (currentVolume * 100).round().toString(),
-                        onChanged: (double value) async {
-                          //use timer for the smoother sliding
-                          timer = Timer(Duration(milliseconds: 200), () async {
-                            await setVolume(value);
-                          });
-                        },
-                      )),
+                      StreamBuilder(
+                          stream: assetsAudioPlayer.volume,
+                          builder: (context, snapshot) {
+                            return Expanded(
+                                child: Slider.adaptive(
+                              activeColor: Color(0xffB4D433),
+                              inactiveColor: Colors.white,
+                              value: Platform.isIOS && snapshot.hasData
+                                  ? snapshot.data
+                                  : currentVolume,
+                              min: 0,
+                              max: 1,
+                              divisions: 100,
+                              label: (snapshot.data * 100).round().toString(),
+                              onChanged: (double value) async {
+                                //use timer for the smoother sliding
+                                timer = Timer(Duration(milliseconds: 200),
+                                    () async {
+                                  Platform.isIOS
+                                      ? assetsAudioPlayer.setVolume(value)
+                                      : setVolume(value);
+                                });
+                              },
+                            ));
+                          }),
                       IconButton(
                         icon: Icon(
                           Icons.volume_up,
@@ -159,7 +176,9 @@ class _ListenPageState extends State<ListenPage> {
                             }
                           });
 
-                          await setVolume(currentVolume);
+                          Platform.isIOS
+                              ? assetsAudioPlayer.setVolume(currentVolume)
+                              : setVolume(currentVolume);
                         },
                       ),
                     ],
@@ -180,7 +199,9 @@ class _ListenPageState extends State<ListenPage> {
                             Radius.circular(MediaQuery.of(context).size.width)),
                   ),
                   child: StreamBuilder(
-                      stream: streamingController.streamingController.stream,
+                      stream: Platform.isAndroid
+                          ? streamingController.streamingController.stream
+                          : assetsAudioPlayer.isPlaying,
                       builder: (context, snapshot) {
                         return Center(
                             child: CircleAvatar(
@@ -189,17 +210,23 @@ class _ListenPageState extends State<ListenPage> {
                                 child: IconButton(
                                     icon: Icon(
                                       snapshot.hasData &&
-                                              snapshot.data == 'playing_event'
+                                                  snapshot.data ==
+                                                      'playing_event' ||
+                                              snapshot.data == true
                                           ? Icons.stop
                                           : Icons.play_arrow,
                                       color: Color(0xffB4D433),
                                       size: 35,
                                     ),
                                     onPressed: () async {
-                                      snapshot.hasData &&
-                                              snapshot.data == 'playing_event'
-                                          ? streamingController.pause()
-                                          : streamingController.play();
+                                      if (Platform.isAndroid) {
+                                        snapshot.hasData &&
+                                                snapshot.data == 'playing_event'
+                                            ? streamingController.pause()
+                                            : streamingController.play();
+                                      } else {
+                                        assetsAudioPlayer.playOrPause();
+                                      }
                                     })));
                       })),
             ),
@@ -209,9 +236,34 @@ class _ListenPageState extends State<ListenPage> {
     );
   }
 
+  initRadio() async {
+    try {
+      await assetsAudioPlayer.open(
+          Audio.liveStream(
+              'https://streams.radiomast.io/4b6d766f-3b8a-422a-ab07-822a1738ff2f',
+              metas: Metas(
+                  album: '88.7 FM',
+                  title: 'Diamond FM',
+                  image: MetasImage(
+                      path: 'https://diamondfm.net/images/diamond-fm-logo.jpeg',
+                      type: ImageType.network))),
+          notificationSettings: NotificationSettings(
+              // customPlayPauseAction: (assetsAudioPlayer) => {print(5)},
+              nextEnabled: false,
+              prevEnabled: false,
+              playPauseEnabled: true,
+              stopEnabled: false),
+          autoStart: false,
+          showNotification: true);
+    } catch (t) {
+      //stream unreachable
+    }
+  }
+
   Future<void> initVolumeState() async {
     if (!mounted) return;
 
+    print(await VolumeControl.volume);
     //read the current volume
     double _val = await VolumeControl.volume;
     setState(() {
@@ -272,9 +324,9 @@ class StreamingController {
     try {
       String result = await _channel.invokeMethod('config', <String, dynamic>{
         'url': url,
-        'notification_title': "Test ",
-        'notification_description': "Description",
-        'notification_color': "#FF0000",
+        'notification_title': "Diamond FM",
+        'notification_description': "88.7 FM",
+        'notification_color': "#888888",
         'notification_stop_button_text': "Stop",
         'notification_pause_button_text': "Pause",
         'notification_play_button_text': "Play",

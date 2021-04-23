@@ -7,23 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed66f77d-441a-49be-b0a1-af625472eaea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Runner.entitlements" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/diamond_fm_app_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/diamond_fm_app_android.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diamond_fm_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/diamond_fm_app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/helpers/NewsHelper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helpers/NewsHelper.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/helpers/player.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helpers/player.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/components/MenuBar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/components/MenuBar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/views/News Page/NewsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/views/News Page/NewsPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/views/Social Media Page/SocialMediaPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/views/Social Media Page/SocialMediaPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/views/Splash Page/SplashPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/views/Splash Page/SplashPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/views/home/ListenPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/views/home/ListenPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/views/home/listenAndroid.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/views/home/listenAndroid.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
@@ -41,6 +31,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="AbdulGafar Olamide Ajao &lt;gafarolamide.ajao@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -49,11 +44,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1nc7lM87ax9hbmC2rD9j5d9pqDK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
@@ -74,45 +73,70 @@
       <option name="presentableId" value="Default" />
       <updated>1611677674208</updated>
     </task>
+    <task id="LOCAL-00001" summary="-Attempt to fix bugs">
+      <created>1619132392935</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619132392935</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="-Attempt to fix bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Attempt to fix bugs" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="512" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619179669502">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="512" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1619179669502" />
     <state x="578" y="276" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1618761142692">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="276" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1618761142692" />
-    <state x="100" y="100" width="1480" height="850" key="AVDManager" timestamp="1619087410758">
+    <state x="100" y="100" width="1480" height="850" key="AVDManager" timestamp="1619188749807">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="100" y="100" width="1480" height="850" key="AVDManager/0.0.1680.1050@0.0.1680.1050" timestamp="1619087410758" />
+    <state x="100" y="100" width="1480" height="850" key="AVDManager/0.0.1680.1050@0.0.1680.1050" timestamp="1619188749807" />
     <state x="100" y="100" width="1480" height="850" key="AVDManager/0.25.1680.982@0.25.1680.982" timestamp="1618680427846" />
-    <state width="1638" height="172" key="GridCell.Tab.0.bottom" timestamp="1619090247165">
+    <state x="369" y="115" key="CommitChangelistDialog2" timestamp="1619132392702">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="172" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1619090247165" />
+    <state x="369" y="115" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1619132392702" />
+    <state width="1638" height="172" key="GridCell.Tab.0.bottom" timestamp="1619192310183">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="172" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1619192310183" />
     <state width="1199" height="255" key="GridCell.Tab.0.bottom/0.23.1680.956@0.23.1680.956" timestamp="1616437890736" />
     <state width="1199" height="255" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1611737099086" />
-    <state width="1638" height="172" key="GridCell.Tab.0.center" timestamp="1619090247162">
+    <state width="1638" height="172" key="GridCell.Tab.0.center" timestamp="1619192310182">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="172" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1619090247162" />
+    <state width="1638" height="172" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1619192310182" />
     <state width="1199" height="255" key="GridCell.Tab.0.center/0.23.1680.956@0.23.1680.956" timestamp="1616437890735" />
     <state width="1199" height="255" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1611737099085" />
-    <state width="1638" height="172" key="GridCell.Tab.0.left" timestamp="1619090247160">
+    <state width="1638" height="172" key="GridCell.Tab.0.left" timestamp="1619192310182">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="172" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1619090247160" />
+    <state width="1638" height="172" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1619192310182" />
     <state width="1199" height="255" key="GridCell.Tab.0.left/0.23.1680.956@0.23.1680.956" timestamp="1616437890733" />
     <state width="1199" height="255" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1611737099085" />
-    <state width="1638" height="172" key="GridCell.Tab.0.right" timestamp="1619090247163">
+    <state width="1638" height="172" key="GridCell.Tab.0.right" timestamp="1619192310183">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="172" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1619090247163" />
+    <state width="1638" height="172" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1619192310183" />
     <state width="1199" height="255" key="GridCell.Tab.0.right/0.23.1680.956@0.23.1680.956" timestamp="1616437890735" />
     <state width="1199" height="255" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1611737099086" />
     <state x="122" y="138" key="SettingsEditor" timestamp="1611678046276">
       <screen x="0" y="23" width="1680" height="960" />
     </state>
     <state x="122" y="138" key="SettingsEditor/0.23.1680.960@0.23.1680.960" timestamp="1611678046276" />
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1619149740888">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1619149740888" />
   </component>
 </project>
